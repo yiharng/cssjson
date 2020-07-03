@@ -36,3 +36,8 @@
   key.del("100%") // Delete frame
   
 ```
+
+# Example
+
+https://yhtpnotes.blogspot.com/2020/07/css-cssjsonjs.html
+
