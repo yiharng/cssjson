@@ -1,6 +1,7 @@
 # cssjson
 
-```
+```javascript
+
   var rc=cssjson();//在 head 新增一個 style
   var rc=cssjson("body");//在 body 新增一個 style
   var rc=cssjson("style");//使用目前網頁中的第一個 style
@@ -9,7 +10,8 @@
 ```
 # Functions
 
-```
+```javascript
+
   rc.list() //列所有的 css 的 tag
   rc.list(".tag") //取得 tag 的索引位置
 
@@ -25,4 +27,5 @@
   key.get("100%") //取得該 frame 的設定，以 json 型態回傳
   key.set("100%",{background-color:"#00f"}) //新增或取代 frame 的設定
   key.del("100%") // 刪除 frame
+  
 ```
