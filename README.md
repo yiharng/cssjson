@@ -1,31 +1,38 @@
-# cssjson
+# Initialize
 
-```javascript
+```html
 
-  var rc=cssjson();//在 head 新增一個 style
-  var rc=cssjson("body");//在 body 新增一個 style
-  var rc=cssjson("style");//使用目前網頁中的第一個 style
-  var rc=cssjson("#objid");//使用 id 為 objid 的 style
+<script src="https://yiharng.github.io/cssjson.min.js"></script>  
 
 ```
-# Functions
+# How to
 
 ```javascript
 
-  rc.list() //列所有的 css 的 tag
-  rc.list(".tag") //取得 tag 的索引位置
+  var rc=cssjson();//Add a <style> to <head>
+  var rc=cssjson("body");//Add a <style> to <body>
+  var rc=cssjson("style");//Use the first <style> in the current webpage
+  var rc=cssjson("#objid");//Use the <style> with id "objid"
+   
+```
+## Functions
 
-  rc.get(".tag") //取得 tag 的 CSS 設定，以 json 型態回傳
-  key=rc.get("@key") //取得 keyframes 名稱為 key 的 CSS 設定
+```javascript
 
-  rc.set(".tag",{color:"#f00"}) //新增或取代 tag 中的 css 設定
-  rc.set(".tag","{color:#f00}") //以字串中的設定取代原來的所有設定
+  rc.list() //List all css name
+  rc.list(".tag") //Get ".tag" index
 
-  rc.del(".tag")//刪除該 tag
+  rc.get(".tag") //Get the CSS setting of ".tag" and return it in json format
+  key=rc.get("@key") //Get the CSS setting of "@keyframes" named "key"
 
-  key.list() //列出所有的 keyframes 
-  key.get("100%") //取得該 frame 的設定，以 json 型態回傳
-  key.set("100%",{background-color:"#00f"}) //新增或取代 frame 的設定
-  key.del("100%") // 刪除 frame
+  rc.set(".tag",{color:"#f00"}) //Add or replace css settings in ".tag"
+  rc.set(".tag","{color:#f00}") //Replace all original settings with the settings in the string
+
+  rc.del(".tag")//Delete ".tag"
+
+  key.list() //List all keyframes
+  key.get("100%") //Get the setting of the frame and return it in json format
+  key.set("100%",{background-color:"#00f"}) //Add or replace frame settings
+  key.del("100%") // Delete frame
   
 ```
