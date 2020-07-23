@@ -46,7 +46,7 @@ function cssjson(sel)
     }
     r.version=function()
     {
-        return "cssjson V1.0.0 2020/7/3 yiharng@gmail.com"
+        return "cssjson V1.0.1 2020/7/23 yiharng@gmail.com"
     }
     r.list=function(s)
     {
@@ -86,8 +86,13 @@ function cssjson(sel)
 
             for (i in a)
             {
+                let m;
                 let k=a[i].split(":");
                 if (k.length<2) continue;
+                for (m=2;m<k.length;m++)
+                {
+                    k[1]+=":"+k[m];
+                }
                 j[k[0].trim()]=k[1].trim();
             }
             return j;
